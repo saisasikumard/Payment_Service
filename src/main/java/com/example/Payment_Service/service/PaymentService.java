@@ -23,4 +23,9 @@ public class PaymentService {
     public String thirdPartypaymentApi(){
         return new Random().nextBoolean()?"Success":"Fail";
     }
+
+    public Payment findByOrderId(int orderId) {
+        Payment payment=paymentRepo.findByOrderId(orderId);
+        return payment;
+    }
 }
